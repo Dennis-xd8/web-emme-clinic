@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Heidy Rodríguez — Emme Clinic</title>
+<meta name="description" content="Conoce a la Dra. Heidy Rodríguez, especialista en armonización facial, bótox avanzado y rellenos en Emme Clinic, Castellón.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema:   #F8F5F1;
+    --marfil:  #E8E0D8;
+    --arena:   #C4B9AE;
+    --topo:    #8C7B6E;
+    --salvia:  #8A9E8C;
+    --burdeos: #7A4A38;
+    --carbon:  #1F1A17;
+    --blanco:  #F8F5F1;
+    --gold:    #B87058;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body:    'Montserrat', sans-serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--blanco);
+    color: var(--carbon);
+    font-family: var(--font-body);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 72px;
+    background: rgba(248, 245, 241, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(196,185,174,0.3);
+  }
+  .nav-logo {
+    font-family: var(--font-display); font-size: 22px;
+    font-weight: 400; letter-spacing: 0.25em;
+    color: var(--carbon); text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-back {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--topo); text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
+    transition: color .25s;
+  }
+  .nav-back:hover { color: var(--carbon); }
+  .nav-cta {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 10px 24px; border: 0.5px solid var(--carbon);
+    background: transparent; color: var(--carbon);
+    font-family: var(--font-body); font-weight: 400;
+    transition: all .25s; text-decoration: none;
+  }
+  .nav-cta:hover { background: var(--carbon); color: var(--blanco); }
+
+  /* ─── HERO DOCTORA ─── */
+  .dra-hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 72px;
+  }
+  .dra-hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 64px 80px 80px;
+  }
+  .dra-label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--salvia); margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .dra-label::before {
+    content: ''; display: block; width: 32px; height: 0.5px; background: var(--salvia);
+  }
+  .dra-hero h1 {
+    font-family: var(--font-display); font-size: clamp(42px, 5vw, 68px);
+    font-weight: 300; line-height: 1.1; letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .dra-hero h1 em { font-style: italic; color: var(--gold); }
+  .dra-role-title {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--topo); margin-bottom: 36px;
+  }
+  .dra-bio-long {
+    font-size: 14px; color: var(--topo); line-height: 2;
+    max-width: 420px; margin-bottom: 48px;
+  }
+  .dra-bio-long p { margin-bottom: 16px; }
+  .dra-social-links {
+    display: flex; gap: 20px; margin: 20px 0 28px;
+    flex-wrap: wrap;
+  }
+  .dra-social-link {
+    display: flex; flex-direction: column; gap: 2px;
+    text-decoration: none; padding: 12px 20px;
+    border: 0.5px solid var(--arena);
+    transition: all .25s;
+  }
+  .dra-social-link:hover { border-color: var(--gold); background: var(--marfil); }
+  .dra-social-label {
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--topo); font-weight: 400;
+  }
+  .dra-social-handle {
+    font-size: 13px; color: var(--carbon); font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .contacto-info {
+    margin-top: 28px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .contacto-row {
+    display: flex; align-items: baseline; gap: 16px;
+  }
+  .contacto-label {
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--topo); min-width: 72px; flex-shrink: 0;
+  }
+  .contacto-val {
+    font-size: 13px; color: var(--carbon); font-weight: 400;
+    text-decoration: none;
+  }
+  .contacto-val:hover { color: var(--gold); }
+  .dra-hero-actions { display: flex; gap: 16px; align-items: center; }
+  .btn-primary {
+    font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase;
+    padding: 14px 32px; background: var(--carbon); color: var(--blanco);
+    border: none; cursor: pointer; font-family: var(--font-body);
+    font-weight: 400; transition: all .3s; text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--burdeos); }
+  .btn-ghost {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 14px 28px; background: transparent; color: var(--carbon);
+    border: 0.5px solid var(--arena); font-family: var(--font-body);
+    font-weight: 400; transition: all .25s; text-decoration: none; display: inline-block;
+  }
+  .btn-ghost:hover { border-color: var(--carbon); }
+
+  .dra-hero-right {
+    background: linear-gradient(160deg, #EAD8CC 0%, #D4BFB0 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: flex-end; justify-content: center;
+  }
+  .dra-photo-main {
+    width: 70%; max-width: 340px;
+    aspect-ratio: 3/4;
+    background: linear-gradient(180deg, #C8A898 0%, #A88070 100%);
+    border-radius: 200px 200px 0 0;
+    position: relative; z-index: 2;
+    margin-bottom: 0;
+  }
+  .dra-hero-badge {
+    position: absolute; top: 48px; left: -24px; z-index: 3;
+    background: var(--blanco); padding: 20px 24px;
+    border-left: 3px solid var(--gold);
+    max-width: 200px;
+    box-shadow: 0 8px 32px rgba(31,26,23,0.08);
+  }
+  .dra-hero-badge p {
+    font-family: var(--font-display); font-size: 13px;
+    font-style: italic; color: var(--carbon); line-height: 1.5;
+  }
+  .dra-hero-badge span {
+    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--topo); display: block; margin-top: 8px;
+  }
+
+  /* ─── ESPECIALIDADES ─── */
+  .esp-section {
+    padding: 100px 80px;
+    background: var(--marfil);
+  }
+  .label-tag {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--salvia); margin-bottom: 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .label-tag::before {
+    content: ''; display: block; width: 24px; height: 0.5px; background: var(--salvia);
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: clamp(34px, 4vw, 54px);
+    font-weight: 300; line-height: 1.15; margin-bottom: 20px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-sub {
+    font-size: 13px; color: var(--topo); line-height: 1.9;
+    max-width: 540px; margin-bottom: 60px;
+  }
+  .esp-pills {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 60px;
+  }
+  .esp-pill {
+    padding: 10px 20px; border: 0.5px solid var(--arena);
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--carbon); background: transparent;
+    transition: all .25s;
+  }
+  .esp-pill:hover { background: var(--carbon); color: var(--blanco); border-color: var(--carbon); }
+
+  /* ─── TRABAJOS / GALERÍA ─── */
+  .trabajos-section {
+    padding: 100px 80px;
+    background: var(--blanco);
+  }
+  .trabajos-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px; margin-top: 60px;
+  }
+  .trabajo-card {
+    aspect-ratio: 3/4; position: relative; overflow: hidden;
+    background: var(--marfil);
+    cursor: pointer;
+  }
+  .trabajo-bg {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .5s ease;
+  }
+  .trabajo-card:hover .trabajo-bg { transform: scale(1.03); }
+  .trabajo-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(31,26,23,0.7) 0%, transparent 50%);
+    opacity: 0; transition: opacity .35s;
+    display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 28px;
+  }
+  .trabajo-card:hover .trabajo-overlay { opacity: 1; }
+  .trabajo-tag {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--blanco); margin-bottom: 4px;
+  }
+  .trabajo-desc {
+    font-family: var(--font-display); font-size: 18px;
+    font-style: italic; color: rgba(248,245,241,0.85);
+  }
+  /* Placeholders con gradientes diferentes para cada trabajo */
+  .t1 { background: linear-gradient(135deg,#E8D5C8 0%,#C8A898 100%); }
+  .t2 { background: linear-gradient(135deg,#D8C4B4 0%,#B89080 100%); }
+  .t3 { background: linear-gradient(135deg,#EAD8CC 0%,#D0B8A8 100%); }
+  .t4 { background: linear-gradient(135deg,#C8B8A8 0%,#A89080 100%); }
+  .t5 { background: linear-gradient(135deg,#DCC8B8 0%,#C0A090 100%); }
+  .t6 { background: linear-gradient(135deg,#E4CEC0 0%,#C8A890 100%); }
+  .trabajo-inner {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .trabajo-placeholder {
+    font-family: var(--font-display); font-size: 13px;
+    color: rgba(31,26,23,0.35); letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ─── FILOSOFÍA PERSONAL ─── */
+  .filosofia-section {
+    padding: 100px 80px;
+    background: var(--carbon);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center;
+  }
+  .filosofia-text .label-tag { color: var(--salvia); }
+  .filosofia-text .label-tag::before { background: var(--salvia); }
+  .filosofia-title {
+    font-family: var(--font-display); font-size: clamp(34px, 4vw, 54px);
+    font-weight: 300; color: var(--blanco); line-height: 1.15; margin-bottom: 28px;
+  }
+  .filosofia-title em { color: var(--gold); font-style: italic; }
+  .filosofia-body {
+    font-size: 14px; color: var(--arena); line-height: 2;
+  }
+  .filosofia-body p { margin-bottom: 16px; }
+  .filosofia-stat {
+    display: flex; flex-direction: column; gap: 40px;
+  }
+  .stat-row {
+    display: flex; align-items: flex-start; gap: 24px;
+    padding-bottom: 40px; border-bottom: 0.5px solid rgba(196,185,174,0.2);
+  }
+  .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .stat-num-big {
+    font-family: var(--font-display); font-size: 56px; font-weight: 300;
+    color: var(--gold); line-height: 1; min-width: 100px;
+  }
+  .stat-info h4 {
+    font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--blanco); margin-bottom: 8px;
+  }
+  .stat-info p {
+    font-size: 12px; color: var(--arena); line-height: 1.8;
+  }
+
+  /* ─── REDES SOCIALES ─── */
+  .social-section {
+    padding: 100px 80px;
+    background: var(--blanco);
+    text-align: center;
+  }
+  .social-section .label-tag { justify-content: center; }
+  .social-section .label-tag::before { display: none; }
+  .social-section .section-title { text-align: center; }
+  .social-section .section-sub { text-align: center; margin: 0 auto 60px; }
+
+  .social-grid {
+    display: flex; justify-content: center; gap: 24px;
+    flex-wrap: wrap; margin-bottom: 60px;
+  }
+  .social-card {
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    padding: 32px 40px; border: 0.5px solid var(--arena);
+    text-decoration: none; color: var(--carbon);
+    transition: all .25s; min-width: 160px;
+  }
+  .social-card:hover { background: var(--carbon); color: var(--blanco); border-color: var(--carbon); }
+  .social-icon {
+    font-size: 28px; line-height: 1;
+  }
+  .social-name {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .social-handle {
+    font-size: 12px; color: var(--topo);
+    transition: color .25s;
+  }
+  .social-card:hover .social-handle { color: var(--arena); }
+
+  .insta-feed-placeholder {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2px; max-width: 800px; margin: 0 auto;
+  }
+  .insta-item {
+    aspect-ratio: 1; background: var(--marfil);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+  }
+  .insta-item-inner {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ip1 { background: linear-gradient(135deg,#E8D5C8,#C8A898); }
+  .ip2 { background: linear-gradient(135deg,#D8C4B4,#B89080); }
+  .ip3 { background: linear-gradient(135deg,#EAD8CC,#D0B8A8); }
+  .ip4 { background: linear-gradient(135deg,#C8B8A8,#A89080); }
+
+  /* ─── CTA ─── */
+  .cta-section {
+    padding: 80px; background: var(--marfil);
+    display: flex; align-items: center; justify-content: space-between; gap: 48px;
+  }
+  .cta-section h2 {
+    font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300; line-height: 1.15;
+  }
+  .cta-section h2 em { font-style: italic; color: var(--gold); }
+  .cta-section p {
+    font-size: 13px; color: var(--topo); line-height: 1.9;
+    max-width: 360px; margin-top: 16px;
+  }
+
+  /* ─── FOOTER MÍNIMO ─── */
+  footer {
+    padding: 40px 80px;
+    background: var(--carbon);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: var(--font-display); font-size: 20px;
+    letter-spacing: 0.25em; color: var(--blanco); text-decoration: none;
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .footer-links a {
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--arena); text-decoration: none; transition: color .25s;
+  }
+  .footer-links a:hover { color: var(--blanco); }
+  .footer-copy {
+    font-size: 10px; letter-spacing: 0.08em; color: var(--topo);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    /* Nav */
+    nav { padding: 0 16px; height: 60px; gap: 8px; }
+    .nav-logo { font-size: 18px; letter-spacing: 0.18em; }
+    .nav-back { font-size: 10px; }
+    .nav-cta { padding: 8px 14px; font-size: 10px; }
+
+    /* Hero: texto arriba, imagen debajo */
+    .dra-hero { grid-template-columns: 1fr; padding-top: 60px; }
+    .dra-hero-left { padding: 36px 20px 32px; order: 1; }
+    .dra-hero-right { height: 72vw; min-height: 260px; max-height: 340px; order: 2; }
+    /* Badge visible y dentro del viewport */
+    .dra-hero-badge {
+      left: 16px !important;
+      right: auto !important;
+      top: 16px;
+      max-width: 200px;
+    }
+    .dra-label { margin-bottom: 14px; }
+    .dra-hero h1 { font-size: clamp(34px, 10vw, 52px); margin-bottom: 8px; }
+    .dra-role-title { margin-bottom: 20px; }
+    .dra-bio-long { font-size: 13px; margin-bottom: 28px; }
+    .dra-hero-actions { flex-direction: column; gap: 10px; }
+    .dra-hero-actions .btn-primary,
+    .dra-hero-actions .btn-ghost { width: 100%; text-align: center; padding: 15px 20px; }
+
+    /* Especialidades */
+    .esp-section { padding: 56px 20px; }
+    .section-title { font-size: clamp(28px, 8vw, 42px); }
+    .esp-pills { gap: 8px; }
+    .esp-pill { font-size: 10px; padding: 9px 14px; }
+
+    /* Galería de trabajos */
+    .trabajos-section { padding: 56px 20px; }
+    .trabajos-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
+
+    /* Filosofía oscura */
+    .filosofia-section { grid-template-columns: 1fr; padding: 56px 20px; gap: 40px; }
+    .stat-row { gap: 16px; padding-bottom: 28px; }
+    .stat-num-big { font-size: 42px; min-width: 80px; }
+
+    /* Redes sociales */
+    .social-section { padding: 56px 20px; }
+    .social-grid { gap: 12px; }
+    .social-card { padding: 24px 20px; min-width: 100px; }
+    .insta-feed-placeholder { grid-template-columns: repeat(2, 1fr); }
+
+    /* Social links */
+    .dra-social-links { flex-direction: column; gap: 8px; }
+
+    /* CTA */
+    .cta-section { flex-direction: column; padding: 56px 20px; align-items: flex-start; gap: 28px; }
+    .cta-section h2 { font-size: clamp(28px, 8vw, 42px); }
+    .cta-section .btn-primary { width: 100%; text-align: center; }
+    .contacto-info { margin-top: 24px; }
+    .contacto-row { flex-direction: column; gap: 2px; }
+
+    /* Footer */
+    footer { flex-direction: column; gap: 20px; padding: 36px 20px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../index.html" class="nav-logo">EMM<span>E</span></a>
+  <a href="../index.html#fundadoras" class="nav-back">← Volver</a>
+  <a href="../index.html#reserva" class="nav-cta">Pide cita</a>
+</nav>
+
+<!-- HERO DOCTORA -->
+<section class="dra-hero">
+  <div class="dra-hero-left">
+    <p class="dra-label">Especialista Facial · Cofundadora</p>
+    <h1>Dra. Heidy<br><em>Rodríguez</em></h1>
+    <p class="dra-role-title">Médica Estética · Armonización & Bótox Avanzado</p>
+    <div class="dra-bio-long">
+      <p>Procedente de República Dominicana, Heidy llegó a España en 2010 con una sólida formación médica. Doctora en Medicina por la Universidad Autónoma de Santo Domingo, se especializó en medicina familiar y comunitaria vía MIR y amplió su formación con un Máster en Medicina de Urgencias, Emergencias y Catástrofes.</p>
+      <p>Experta en medicina estética, nutrición y antienvejecimiento, lleva enamorada de esta especialidad desde hace años. En 2019 emprendió el camino junto a su amiga y socia Diana López y, a pesar de las adversidades de la pandemia, en 2021 fundaron juntas Emme Clinic: un espacio donde la parte artística y científica de la medicina estética se unen para ayudar a cada paciente a mejorar su aspecto, elevar su autoestima y potenciar su belleza natural.</p>
+    </div>
+    <div class="dra-social-links">
+      <a href="https://www.instagram.com/dra.heidyrodriguezl/" target="_blank" class="dra-social-link">
+        <span class="dra-social-label">Instagram</span>
+        <span class="dra-social-handle">@dra.heidyrodriguezl</span>
+      </a>
+      <a href="https://www.tiktok.com/@emmeclinic" target="_blank" class="dra-social-link">
+        <span class="dra-social-label">TikTok</span>
+        <span class="dra-social-handle">@emmeclinic</span>
+      </a>
+    </div>
+    <div class="dra-hero-actions">
+      <a href="../index.html#reserva" class="btn-primary">Pedir cita con Heidy</a>
+    </div>
+  </div>
+  <div class="dra-hero-right">
+    <div class="dra-photo-main"></div>
+    <div class="dra-hero-badge">
+      <p>"El resultado nunca debe gritar. Solo debe susurrar que estás espléndida."</p>
+      <span>— Dra. Heidy Rodríguez</span>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section class="esp-section">
+  <div class="label-tag">Áreas de especialización</div>
+  <h2 class="section-title">Lo que Heidy<br><em>hace mejor</em></h2>
+  <p class="section-sub">Cada técnica dominada con precisión milimétrica. Cada resultado pensado para que seas más tú, nunca otra persona.</p>
+  <div class="esp-pills">
+    <div class="esp-pill">Armonización facial</div>
+    <div class="esp-pill">Labios & perfilado</div>
+    <div class="esp-pill">Bótox avanzado</div>
+    <div class="esp-pill">Rinomodelación</div>
+    <div class="esp-pill">Remodelación mandíbula</div>
+    <div class="esp-pill">Pómulos & mentón</div>
+    <div class="esp-pill">Bioestimuladores</div>
+    <div class="esp-pill">Ácido hialurónico</div>
+  </div>
+</section>
+
+<!-- TRABAJOS -->
+<section class="trabajos-section">
+  <div class="label-tag">Resultados reales</div>
+  <h2 class="section-title">Casos <em>destacados</em></h2>
+  <p class="section-sub">Resultados publicados con consentimiento de cada paciente. Cada caso es único; los resultados pueden variar.</p>
+
+  <div class="trabajos-grid">
+    <div class="trabajo-card">
+      <div class="trabajo-bg t1">
+        <div class="trabajo-inner">
+          <span class="trabajo-placeholder">Fotografía · Caso 01</span>
+        </div>
+      </div>
+      <div class="trabajo-overlay">
+        <p class="trabajo-tag">Armonización facial</p>
+        <p class="trabajo-desc">Resultado a 3 semanas</p>
+      </div>
+    </div>
+    <div class="trabajo-card">
+      <div class="trabajo-bg t2">
+        <div class="trabajo-inner">
+          <span class="trabajo-placeholder">Fotografía · Caso 02</span>
+        </div>
+      </div>
+      <div class="trabajo-overlay">
+        <p class="trabajo-tag">Perfilado de labios</p>
+        <p class="trabajo-desc">Resultado a 10 días</p>
+      </div>
+    </div>
+    <div class="trabajo-card">
+      <div class="trabajo-bg t3">
+        <div class="trabajo-inner">
+          <span class="trabajo-placeholder">Fotografía · Caso 03</span>
+        </div>
+      </div>
+      <div class="trabajo-overlay">
+        <p class="trabajo-tag">Rinomodelación</p>
+        <p class="trabajo-desc">Resultado inmediato</p>
+      </div>
+    </div>
+    <div class="trabajo-card">
+      <div class="trabajo-bg t4">
+        <div class="trabajo-inner">
+          <span class="trabajo-placeholder">Fotografía · Caso 04</span>
+        </div>
+      </div>
+      <div class="trabajo-overlay">
+        <p class="trabajo-tag">Bótox avanzado</p>
+        <p class="trabajo-desc">Resultado a 2 semanas</p>
+      </div>
+    </div>
+    <div class="trabajo-card">
+      <div class="trabajo-bg t5">
+        <div class="trabajo-inner">
+          <span class="trabajo-placeholder">Fotografía · Caso 05</span>
+        </div>
+      </div>
+      <div class="trabajo-overlay">
+        <p class="trabajo-tag">Pómulos & mentón</p>
+        <p class="trabajo-desc">Resultado a 3 semanas</p>
+      </div>
+    </div>
+    <div class="trabajo-card">
+      <div class="trabajo-bg t6">
+        <div class="trabajo-inner">
+          <span class="trabajo-placeholder">Fotografía · Caso 06</span>
+        </div>
+      </div>
+      <div class="trabajo-overlay">
+        <p class="trabajo-tag">Mandíbula & jawline</p>
+        <p class="trabajo-desc">Resultado a 1 mes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILOSOFÍA -->
+<section class="filosofia-section">
+  <div class="filosofia-text">
+    <div class="label-tag">Su enfoque</div>
+    <h2 class="filosofia-title">Medicina<br>con <em>criterio artístico</em></h2>
+    <div class="filosofia-body">
+      <p>Heidy no trabaja con protocolos estándar. Trabaja con personas. Cada valoración comienza con una pregunta simple: ¿qué te molesta y por qué? Y desde ahí construye un plan honesto.</p>
+      <p>Su formación MIR le da la base médica rigurosa. Su sensibilidad estética le da el ojo. La combinación de ambas es lo que sus pacientes llaman "el resultado Heidy".</p>
+    </div>
+  </div>
+  <div class="filosofia-stat">
+    <div class="stat-row">
+      <div class="stat-num-big">+800</div>
+      <div class="stat-info">
+        <h4>Pacientes atendidas</h4>
+        <p>Casos resueltos desde la apertura de Emme Clinic en Castellón</p>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-num-big">5+</div>
+      <div class="stat-info">
+        <h4>Años de experiencia</h4>
+        <p>En medicina estética con formación continua en técnicas europeas de vanguardia</p>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-num-big">100%</div>
+      <div class="stat-info">
+        <h4>Resultados naturales</h4>
+        <p>Nunca un resultado que no pase el filtro: ¿nadie nota que se ha hecho algo?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="cta-section" id="contacto">
+  <div>
+    <h2>¿Lista para tu<br><em>valoración gratuita</em>?</h2>
+    <p>La primera consulta con Heidy es sin coste y sin compromiso. Te escucha, analiza y diseña contigo el plan más honesto.</p>
+  </div>
+  <a href="../index.html#reserva" class="btn-primary" style="white-space:nowrap">Reservar cita →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="../index.html" class="footer-logo">EMM<span>E</span></a>
+  <ul class="footer-links">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="diana.html">Dra. Diana</a></li>
+    <li><a href="../index.html#tratamientos">Tratamientos</a></li>
+    <li><a href="../index.html#reserva">Pedir cita</a></li>
+  </ul>
+  <span class="footer-copy">© 2025 Emme Clinic · Castellón</span>
+</footer>
+
+</body>
+</html>

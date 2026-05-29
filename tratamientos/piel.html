@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tratamientos de Calidad de Piel — Microneedling, PRP, Peelings · EMME CLINIC Castellón</title>
+<meta name="description" content="Microneedling, PRP facial, mesoterapia, peelings químicos, Hydrafacial y más. Tratamientos para mejorar la calidad y textura de tu piel en Castellón.">
+<meta name="keywords" content="microneedling Castellón, PRP facial Castellón, peeling químico Castellón, mesoterapia facial Castellón, Hydrafacial Castellón, mejora piel Castellón">
+<link rel="canonical" href="https://emmeclinic.es/tratamientos/piel">
+<meta property="og:title" content="Calidad de Piel — EMME CLINIC Castellón">
+<meta property="og:description" content="Mejora la textura, luminosidad y calidad de tu piel con tratamientos médicos personalizados. Emme Clinic, Castellón.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+  .page-hero {
+    padding: 140px 80px 80px;
+    background: var(--crema);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: end;
+    border-bottom: 0.5px solid var(--arena);
+  }
+  .page-hero-eyebrow {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--salvia); margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .page-hero-eyebrow::before { content: ''; width: 24px; height: 0.5px; background: var(--salvia); }
+  .page-hero-title {
+    font-family: var(--font-display); font-size: clamp(44px, 5.5vw, 72px);
+    font-weight: 300; line-height: 1.05; color: var(--carbon); margin-bottom: 24px;
+  }
+  .page-hero-title em { font-style: italic; color: var(--gold); }
+  .page-hero-sub { font-size: 13px; color: var(--topo); line-height: 1.9; font-weight: 300; max-width: 420px; }
+  .page-hero-right { display: flex; flex-direction: column; gap: 24px; padding-bottom: 8px; }
+  .hero-stat-row { display: flex; gap: 40px; }
+  .hero-stat-item .num {
+    font-family: var(--font-display); font-size: 42px; font-weight: 300;
+    color: var(--carbon); line-height: 1;
+  }
+  .hero-stat-item .lbl {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--topo); margin-top: 4px;
+  }
+  .hero-highlight {
+    padding: 20px 24px; border-left: 2px solid var(--gold); background: var(--marfil);
+  }
+  .hero-highlight p {
+    font-family: var(--font-display); font-size: 15px; font-style: italic;
+    color: var(--carbon); line-height: 1.5;
+  }
+  .hero-highlight span {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--topo); margin-top: 8px; display: block;
+  }
+
+  .page-content { padding: 80px 80px 0; }
+
+  .intro-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    margin-bottom: 80px; align-items: start;
+  }
+  .intro-text p { font-size: 14px; color: var(--topo); line-height: 1.9; font-weight: 300; margin-bottom: 20px; }
+  .intro-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .intro-list li {
+    font-size: 12px; color: var(--carbon); padding: 12px 16px;
+    border: 0.5px solid var(--arena); display: flex; align-items: center; gap: 12px; font-weight: 300;
+  }
+  .intro-list li::before { content: '—'; color: var(--gold); font-size: 11px; flex-shrink: 0; }
+
+  .treatments-header { border-top: 0.5px solid var(--arena); padding-top: 72px; margin-bottom: 48px; }
+  .treatments-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--arena); border: 0.5px solid var(--arena); margin-bottom: 80px;
+  }
+  .treatment-card {
+    background: var(--blanco); padding: 40px 36px;
+    transition: background .3s; position: relative;
+  }
+  .treatment-card:hover { background: var(--crema); }
+  .treatment-num {
+    font-family: var(--font-display); font-size: 13px; font-weight: 300;
+    color: var(--gold); margin-bottom: 12px; letter-spacing: 0.05em;
+  }
+  .treatment-name {
+    font-family: var(--font-display); font-size: 24px; font-weight: 400;
+    color: var(--carbon); margin-bottom: 12px; line-height: 1.2;
+  }
+  .treatment-need {
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--salvia); margin-bottom: 16px; font-weight: 400;
+  }
+  .treatment-desc { font-size: 13px; color: var(--topo); line-height: 1.8; font-weight: 300; margin-bottom: 24px; }
+  .treatment-details { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+  .detail-row { display: flex; gap: 12px; align-items: baseline; font-size: 11px; font-weight: 300; }
+  .detail-label { color: var(--topo); letter-spacing: 0.08em; text-transform: uppercase; font-size: 10px; min-width: 100px; flex-shrink: 0; }
+  .detail-value { color: var(--carbon); }
+  .treatment-cta {
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--carbon); font-weight: 500; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px; transition: gap .25s;
+    border-bottom: 0.5px solid var(--arena); padding-bottom: 4px;
+  }
+  .treatment-cta:hover { gap: 14px; border-color: var(--carbon); }
+
+  .faq-section { padding: 72px 80px; background: var(--marfil); border-top: 0.5px solid var(--arena); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+  .faq-item { padding-bottom: 24px; border-bottom: 0.5px solid var(--arena); }
+  .faq-q { font-family: var(--font-display); font-size: 17px; font-weight: 400; color: var(--carbon); margin-bottom: 10px; line-height: 1.3; }
+  .faq-a { font-size: 12px; color: var(--topo); line-height: 1.8; font-weight: 300; }
+
+  .metodo-reminder {
+    padding: 80px; background: var(--carbon); color: var(--crema);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: center; position: relative; overflow: hidden;
+  }
+  .metodo-reminder::before {
+    content: 'EMME'; font-family: var(--font-display); font-size: 200px; font-weight: 300;
+    color: rgba(255,255,255,0.025); position: absolute; bottom: -20px; right: -20px;
+    letter-spacing: -0.02em; pointer-events: none;
+  }
+  .metodo-reminder .label-tag { color: var(--salvia); }
+  .metodo-reminder .label-tag::before { background: var(--salvia); }
+  .reminder-title { font-family: var(--font-display); font-size: clamp(30px, 3.5vw, 46px); font-weight: 300; color: var(--crema); line-height: 1.15; margin-bottom: 20px; }
+  .reminder-title em { font-style: italic; color: var(--gold); }
+  .reminder-sub { font-size: 13px; color: var(--arena); line-height: 1.9; font-weight: 300; margin-bottom: 32px; }
+  .reminder-steps { display: flex; flex-direction: column; gap: 0; }
+  .r-step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 0.5px solid rgba(168,149,133,0.15); }
+  .r-step:first-child { border-top: 0.5px solid rgba(168,149,133,0.15); }
+  .r-step-num { font-family: var(--font-display); font-size: 12px; font-weight: 300; color: var(--gold); min-width: 24px; padding-top: 2px; }
+  .r-step h4 { font-family: var(--font-display); font-size: 16px; font-weight: 400; color: var(--crema); }
+  .r-step p { font-size: 11px; color: var(--arena); line-height: 1.6; font-weight: 300; margin-top: 3px; }
+
+  @media (max-width: 900px) {
+    .page-hero { padding: 120px 24px 56px; grid-template-columns: 1fr; gap: 40px; }
+    .page-content { padding: 56px 24px 0; }
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; margin-bottom: 56px; }
+    .treatments-grid { grid-template-columns: 1fr; }
+    .faq-section { padding: 56px 24px; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .metodo-reminder { padding: 64px 24px; grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <a href="../emme-clinic.html" class="nav-logo">EMM<span>E</span></a>
+  <ul class="nav-links">
+    <li><a href="../nosotras.html">Nosotras</a></li>
+    <li><a href="#" class="active">Tratamientos</a></li>
+    <li><a href="../emme-clinic.html#resultados">Resultados</a></li>
+    <li><a href="../emme-clinic.html#biblioteca">Biblioteca</a></li>
+    <li><a href="../emme-clinic.html#reserva">Contacto</a></li>
+  </ul>
+  <a href="../emme-clinic.html#reserva" class="nav-cta">Pide cita</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="navMobile">
+  <a href="../nosotras.html">Nosotras</a>
+  <a href="../emme-clinic.html#tratamientos" class="nav-mobile-close">Tratamientos</a>
+  <a href="../emme-clinic.html#resultados" class="nav-mobile-close">Resultados</a>
+  <a href="../emme-clinic.html#biblioteca" class="nav-mobile-close">Biblioteca</a>
+  <a href="../emme-clinic.html#reserva" class="nav-mobile-close">Contacto</a>
+  <a href="../emme-clinic.html#reserva" class="nav-mobile-close">Pide cita →</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div>
+    <div class="breadcrumb">
+      <a href="../emme-clinic.html">Inicio</a>
+      <span>/</span>
+      <a href="#">Tratamientos</a>
+      <span>/</span>
+      Calidad de piel
+    </div>
+    <p class="page-hero-eyebrow">Área piel</p>
+    <h1 class="page-hero-title">Calidad<br>de <em>piel</em></h1>
+    <p class="page-hero-sub">Tu piel tiene memoria. Los tratamientos de calidad de piel de Emme Clinic trabajan desde adentro para mejorar textura, luminosidad, firmeza y uniformidad. Ciencia médica al servicio de tu piel real.</p>
+  </div>
+  <div class="page-hero-right">
+    <div class="hero-stat-row">
+      <div class="hero-stat-item">
+        <div class="num">8</div>
+        <div class="lbl">Tratamientos de piel</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="num">100%</div>
+        <div class="lbl">Médicamente respaldados</div>
+      </div>
+    </div>
+    <div class="hero-highlight">
+      <p>"La piel bien tratada no necesita filtros. Solo necesita tiempo y el protocolo correcto."</p>
+      <span>— Dra. Diana López</span>
+    </div>
+    <a href="../emme-clinic.html#reserva" class="btn-primary">Solicitar valoración gratuita</a>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="page-content">
+
+  <div class="intro-grid">
+    <div class="intro-text">
+      <p>El área de calidad de piel de Emme Clinic está liderada por la <strong>Dra. Diana López</strong>, especialista en longevidad, medicina anti-aging y tratamientos de bienestar cutáneo. Su enfoque integrativo trata la piel no solo como superficie, sino como órgano: con diagnóstico completo, protocolo adaptado y seguimiento real.</p>
+      <p>Antes de cualquier tratamiento de piel, realizamos un <strong>análisis cutáneo personalizado</strong> donde evaluamos fototipo, sensibilidad, afecciones activas y objetivos. Esto determina qué tratamiento es el más adecuado, en qué momento y con qué frecuencia.</p>
+      <a href="../emme-clinic.html#reserva" class="btn-ghost" style="margin-top:8px">Primera consulta gratuita</a>
+    </div>
+    <ul class="intro-list">
+      <li>Análisis cutáneo completo antes de iniciar cualquier protocolo</li>
+      <li>Tratamientos adaptados a fototipo y sensibilidad</li>
+      <li>Protocolos de sesión única o en ciclos según el tratamiento</li>
+      <li>Sin agresividad — los resultados duraderos no requieren destruir</li>
+      <li>Compatible con embarazo (algunos tratamientos) — consultable</li>
+      <li>Seguimiento post-tratamiento y cuidados domiciliarios personalizados</li>
+    </ul>
+  </div>
+
+  <div class="treatments-header">
+    <div class="label-tag">Tratamientos disponibles</div>
+    <h2 class="section-title">Área <em>Calidad de Piel</em></h2>
+    <p class="section-sub">Cada tratamiento actúa en un nivel diferente. El plan correcto combina lo que tu piel necesita, no lo que está de moda.</p>
+  </div>
+
+  <div class="treatments-grid">
+
+    <div class="treatment-card">
+      <div class="treatment-num">01</div>
+      <h3 class="treatment-name">Microneedling / Dermapen</h3>
+      <p class="treatment-need">Para regenerar y mejorar la textura de la piel</p>
+      <p class="treatment-desc">El microneedling crea microcanales controlados en la piel que activan la producción natural de colágeno y elastina. Efectivo para mejorar textura, reducir poros, tratar cicatrices de acné, estrías y arrugas finas. Resultados progresivos y duraderos.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Textura irregular, poros dilatados, cicatrices, estrías</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">45 – 60 minutos (incluye anestesia tópica)</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">3 – 6 sesiones (cada 4 semanas)</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">Rojez 24–48h, leve descamación días 3–5</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">02</div>
+      <h3 class="treatment-name">PRP facial (Plasma Rico en Plaquetas)</h3>
+      <p class="treatment-need">Para rejuvenecimiento con los factores de crecimiento propios</p>
+      <p class="treatment-desc">El PRP utiliza los factores de crecimiento extraídos de tu propia sangre para estimular la regeneración celular. Es la opción más natural: sin componentes externos. Mejora la calidad global de la piel, la luminosidad y la firmeza con un perfil de seguridad excelente.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Envejecimiento cutáneo, falta de luminosidad, piel apagada</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">60 minutos (extracción + procesado + aplicación)</span></div>
+        <div class="detail-row"><span class="detail-row">Sesiones</span><span class="detail-value">3 sesiones (cada 3–4 semanas), mantenimiento anual</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">Mínima — posible rojez leve 24h</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">03</div>
+      <h3 class="treatment-name">Mesoterapia facial</h3>
+      <p class="treatment-need">Para nutrir, hidratar y revitalizar la piel en profundidad</p>
+      <p class="treatment-desc">La mesoterapia introduce en la dermis una mezcla personalizada de vitaminas, minerales, ácido hialurónico no reticulado y aminoácidos. El resultado es una piel más hidratada, luminosa y firme. Ideal como tratamiento de fondo o de mantenimiento.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Deshidratación, falta de brillo, primeras líneas, estrés cutáneo</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">30 – 45 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">4 sesiones iniciales, mantenimiento mensual</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">Inmediata — posibles marcas de aguja 24–48h</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">04</div>
+      <h3 class="treatment-name">Peelings químicos</h3>
+      <p class="treatment-need">Para renovar la piel y mejorar su textura y uniformidad</p>
+      <p class="treatment-desc">Los peelings químicos de grado médico exfolian de forma controlada las capas superficiales o medias de la piel, activando la renovación celular. Existen diferentes profundidades y ácidos según el objetivo: superficiales (AHA), medios (TCA) o combinados. El tipo correcto depende del diagnóstico.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Manchas, irregularidades de textura, melasma, acné</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">30 – 45 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">1–6 según profundidad y objetivo</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">De 2 días (superficial) a 7–10 días (medio)</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">05</div>
+      <h3 class="treatment-name">Bioestimuladores de colágeno</h3>
+      <p class="treatment-need">Para estimular la producción natural de colágeno a largo plazo</p>
+      <p class="treatment-desc">Productos como Sculptra (ácido poliláctico) o Radiesse (hidroxiapatita cálcica) no rellenan: estimulan al propio organismo a producir colágeno nuevo. Sus resultados son progresivos, naturales y duraderos. Indicados especialmente para la pérdida de calidad y firmeza general de la piel.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Pérdida de firmeza, piel laxa, envejecimiento global</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">45 – 60 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">2 – 3 sesiones (cada 4–6 semanas)</span></div>
+        <div class="detail-row"><span class="detail-label">Duración efecto</span><span class="detail-value">18 – 24 meses</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">06</div>
+      <h3 class="treatment-name">Tratamiento de manchas y melasma</h3>
+      <p class="treatment-need">Para reducir hiperpigmentación con criterio médico</p>
+      <p class="treatment-desc">Las manchas tienen múltiples orígenes y no todas responden igual a los mismos tratamientos. En Emme Clinic diseñamos protocolos específicos combinando peelings, mesoterapia despigmentante y fotoprotección médica. El melasma requiere tratamiento especializado y seguimiento continuo.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Melasma, manchas solares, post-inflamatorias</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">30 – 45 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">Según diagnóstico — mínimo 4 sesiones</span></div>
+        <div class="detail-row"><span class="detail-label">Nota</span><span class="detail-value">Requiere fotoprotección estricta paralela</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">07</div>
+      <h3 class="treatment-name">Hydrafacial</h3>
+      <p class="treatment-need">Para limpieza profunda, hidratación y luminosidad inmediata</p>
+      <p class="treatment-desc">El Hydrafacial es un tratamiento de resultado inmediato que combina limpieza, exfoliación, extracción de impurezas e infusión de activos en un solo paso. Sin dolor, sin irritación y con efecto "glow" visible desde la primera sesión. Ideal como preparación o mantenimiento.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Todo tipo de piel, resultado inmediato, sin recuperación</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">45 – 60 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">Única o mensual de mantenimiento</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">Ninguna — resultado inmediato</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">08</div>
+      <h3 class="treatment-name">Vitamina C intravenosa</h3>
+      <p class="treatment-need">Para luminosidad y antioxidación desde dentro</p>
+      <p class="treatment-desc">La vitamina C en altas dosis por vía intravenosa actúa como potente antioxidante, mejora la síntesis de colágeno y aporta luminosidad desde dentro hacia afuera. A diferencia de la aplicación tópica, la vía IV garantiza una absorción y biodisponibilidad completa.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Piel apagada, estrés oxidativo, cansancio cutáneo</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">30 – 45 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">1–4 sesiones iniciales, mantenimiento mensual</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">Ninguna</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="label-tag">Preguntas frecuentes</div>
+  <h2 class="section-title">Lo que más nos <em>preguntan</em></h2>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <p class="faq-q">¿Cuántas sesiones de microneedling necesito para ver resultados?</p>
+      <p class="faq-a">Los primeros cambios son perceptibles tras la 2ª–3ª sesión. Los resultados óptimos se alcanzan al completar el ciclo de 4–6 sesiones. La piel sigue mejorando hasta 6 meses después del último tratamiento gracias a la producción de colágeno activa.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿El PRP da resultados seguros? ¿Qué riesgos tiene?</p>
+      <p class="faq-a">Al utilizar tu propia sangre procesada, el PRP tiene un perfil de seguridad excelente. No hay riesgo de reacciones alérgicas a componentes externos. Los efectos secundarios son mínimos: leve enrojecimiento y sensibilidad 24–48h.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿Puedo hacer un peeling en verano?</p>
+      <p class="faq-a">Los peelings superficiales pueden realizarse en verano con fotoprotección estricta. Los peelings medios o profundos se recomiendan en otoño-invierno. En tu valoración evaluamos el momento más adecuado para tu caso y el tipo de peeling correcto.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿Cuánto tarda en mejorar el melasma?</p>
+      <p class="faq-a">El melasma es una condición crónica que mejora con tratamiento continuado pero puede reactivarse. Un protocolo completo dura 3–6 meses. La fotoprotección diaria es imprescindible durante y después del tratamiento. Hay que gestionar expectativas honestas.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿Se puede combinar microneedling con PRP?</p>
+      <p class="faq-a">Sí, de hecho es una combinación muy potente. El PRP aplicado durante el microneedling potencia la regeneración y acelera la recuperación. La valoramos en función de tu tipo de piel y objetivos.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿Los bioestimuladores de colágeno son seguros?</p>
+      <p class="faq-a">Sculptra y Radiesse son productos con amplio historial clínico y excelente perfil de seguridad. Son biodegradables y no dejan residuos permanentes. La clave está en la técnica de aplicación y en una selección adecuada del candidato.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO EMME -->
+<section class="metodo-reminder">
+  <div>
+    <p class="label-tag">Nuestro proceso</p>
+    <h2 class="reminder-title">Tu protocolo de piel empieza<br>con un <em>diagnóstico</em></h2>
+    <p class="reminder-sub">No todos los tratamientos de piel funcionan igual para todas las pieles. Por eso empezamos siempre con análisis cutáneo, historia clínica y objetivos reales. El protocolo lo diseñamos juntas.</p>
+    <a href="../emme-clinic.html#reserva" class="btn-gold">Reservar primera consulta</a>
+  </div>
+  <div class="reminder-steps">
+    <div class="r-step">
+      <div class="r-step-num">01</div>
+      <div>
+        <h4>Análisis cutáneo completo</h4>
+        <p>Fototipo, sensibilidad, afecciones activas, historial de tratamientos.</p>
+      </div>
+    </div>
+    <div class="r-step">
+      <div class="r-step-num">02</div>
+      <div>
+        <h4>Diagnóstico y protocolo</h4>
+        <p>Selección de tratamiento, número de sesiones y cronograma.</p>
+      </div>
+    </div>
+    <div class="r-step">
+      <div class="r-step-num">03</div>
+      <div>
+        <h4>Tratamiento & seguimiento</h4>
+        <p>Revisión entre sesiones. Ajuste del protocolo si es necesario.</p>
+      </div>
+    </div>
+    <div class="r-step">
+      <div class="r-step-num">04</div>
+      <div>
+        <h4>Plan de mantenimiento</h4>
+        <p>Cuidados en casa personalizados + sesiones de mantenimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">EMM<span>E</span></span>
+      <p class="footer-desc">Medicina estética de autor en Castellón. Dos especialistas, una misma visión: resultados naturales que respetan tu esencia.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Tratamientos</h5>
+      <ul>
+        <li><a href="facial.html">Facial</a></li>
+        <li><a href="piel.html">Calidad de piel</a></li>
+        <li><a href="corporal.html">Corporales</a></li>
+        <li><a href="bienestar.html">Bienestar</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Clínica</h5>
+      <ul>
+        <li><a href="../nosotras.html">Sobre nosotras</a></li>
+        <li><a href="../emme-clinic.html#metodo">El método Emme</a></li>
+        <li><a href="../emme-clinic.html#resultados">Resultados</a></li>
+        <li><a href="../emme-clinic.html#biblioteca">Biblioteca</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="#">Calle Madrid 10, Castellón</a></li>
+        <li><a href="../emme-clinic.html#reserva">Pedir cita</a></li>
+        <!-- TODO: Reemplazar con número de WhatsApp real -->
+        <li><a href="https://wa.me/34600000000">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/emme_clinic/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Emme Clinic · Medicina Estética · Castellón · Todos los derechos reservados</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/emme_clinic/" class="social-link" target="_blank">IG</a>
+      <a href="https://www.instagram.com/dra.heidyrodriguezl/" class="social-link" target="_blank">H</a>
+      <a href="https://www.instagram.com/dra.dianalopezp/" class="social-link" target="_blank">D</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TODO: Reemplazar con número de WhatsApp real -->
+<a href="https://wa.me/34600000000" class="wa-float" target="_blank" title="Escríbenos por WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMobile.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-mobile-close').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navMobile.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>

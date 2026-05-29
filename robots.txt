@@ -1,0 +1,7 @@
+# robots.txt — Emme Clinic
+# TODO: Actualizar con dominio real
+
+User-agent: *
+Allow: /
+
+Sitemap: https://emmeclinic.es/sitemap.xml

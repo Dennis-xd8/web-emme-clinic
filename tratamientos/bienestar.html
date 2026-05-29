@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienestar & Longevidad — Terapia IV, Anti-aging, PRP Capilar · EMME CLINIC Castellón</title>
+<meta name="description" content="Terapia IV vitamínica, medicina anti-aging, PRP capilar, mesoterapia capilar, nutrición médica y análisis de composición corporal. Bienestar integral en Castellón.">
+<meta name="keywords" content="terapia IV Castellón, medicina anti-aging Castellón, PRP capilar Castellón, longevidad Castellón, bienestar integral Castellón, nutrición médica Castellón">
+<link rel="canonical" href="https://emmeclinic.es/tratamientos/bienestar">
+<meta property="og:title" content="Bienestar & Longevidad — EMME CLINIC Castellón">
+<meta property="og:description" content="Medicina integrativa para vivir mejor y durante más tiempo. Terapias de longevidad, bienestar y salud interna. Emme Clinic, Castellón.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+  .page-hero {
+    padding: 140px 80px 80px; background: var(--crema);
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: end; border-bottom: 0.5px solid var(--arena);
+  }
+  .page-hero-eyebrow { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--salvia); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .page-hero-eyebrow::before { content: ''; width: 24px; height: 0.5px; background: var(--salvia); }
+  .page-hero-title { font-family: var(--font-display); font-size: clamp(44px, 5.5vw, 72px); font-weight: 300; line-height: 1.05; color: var(--carbon); margin-bottom: 24px; }
+  .page-hero-title em { font-style: italic; color: var(--gold); }
+  .page-hero-sub { font-size: 13px; color: var(--topo); line-height: 1.9; font-weight: 300; max-width: 420px; }
+  .page-hero-right { display: flex; flex-direction: column; gap: 24px; padding-bottom: 8px; }
+  .hero-stat-row { display: flex; gap: 40px; }
+  .hero-stat-item .num { font-family: var(--font-display); font-size: 42px; font-weight: 300; color: var(--carbon); line-height: 1; }
+  .hero-stat-item .lbl { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--topo); margin-top: 4px; }
+  .hero-highlight { padding: 20px 24px; border-left: 2px solid var(--gold); background: var(--marfil); }
+  .hero-highlight p { font-family: var(--font-display); font-size: 15px; font-style: italic; color: var(--carbon); line-height: 1.5; }
+  .hero-highlight span { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--topo); margin-top: 8px; display: block; }
+  .page-content { padding: 80px 80px 0; }
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 80px; align-items: start; }
+  .intro-text p { font-size: 14px; color: var(--topo); line-height: 1.9; font-weight: 300; margin-bottom: 20px; }
+  .intro-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .intro-list li { font-size: 12px; color: var(--carbon); padding: 12px 16px; border: 0.5px solid var(--arena); display: flex; align-items: center; gap: 12px; font-weight: 300; }
+  .intro-list li::before { content: '—'; color: var(--gold); font-size: 11px; flex-shrink: 0; }
+  .treatments-header { border-top: 0.5px solid var(--arena); padding-top: 72px; margin-bottom: 48px; }
+  .treatments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--arena); border: 0.5px solid var(--arena); margin-bottom: 80px; }
+  .treatment-card { background: var(--blanco); padding: 40px 36px; transition: background .3s; }
+  .treatment-card:hover { background: var(--crema); }
+  .treatment-num { font-family: var(--font-display); font-size: 13px; font-weight: 300; color: var(--gold); margin-bottom: 12px; letter-spacing: 0.05em; }
+  .treatment-name { font-family: var(--font-display); font-size: 24px; font-weight: 400; color: var(--carbon); margin-bottom: 12px; line-height: 1.2; }
+  .treatment-need { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--salvia); margin-bottom: 16px; font-weight: 400; }
+  .treatment-desc { font-size: 13px; color: var(--topo); line-height: 1.8; font-weight: 300; margin-bottom: 24px; }
+  .treatment-details { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+  .detail-row { display: flex; gap: 12px; align-items: baseline; font-size: 11px; font-weight: 300; }
+  .detail-label { color: var(--topo); letter-spacing: 0.08em; text-transform: uppercase; font-size: 10px; min-width: 100px; flex-shrink: 0; }
+  .detail-value { color: var(--carbon); }
+  .treatment-cta { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--carbon); font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: gap .25s; border-bottom: 0.5px solid var(--arena); padding-bottom: 4px; }
+  .treatment-cta:hover { gap: 14px; border-color: var(--carbon); }
+
+  /* Filosofía bienestar */
+  .filosofia-bienstar {
+    padding: 72px 80px; background: var(--marfil);
+    border-top: 0.5px solid var(--arena); border-bottom: 0.5px solid var(--arena);
+  }
+  .fil-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 48px; align-items: start; }
+  .fil-text p { font-size: 14px; color: var(--topo); line-height: 1.9; font-weight: 300; margin-bottom: 20px; }
+  .fil-pillars { display: flex; flex-direction: column; gap: 20px; }
+  .fil-pillar { padding: 20px 24px; border: 0.5px solid var(--arena); background: var(--blanco); }
+  .fil-pillar-title { font-family: var(--font-display); font-size: 17px; font-weight: 400; color: var(--carbon); margin-bottom: 6px; }
+  .fil-pillar-desc { font-size: 12px; color: var(--topo); line-height: 1.7; font-weight: 300; }
+
+  .faq-section { padding: 72px 80px; background: var(--blanco); border-top: 0.5px solid var(--arena); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+  .faq-item { padding-bottom: 24px; border-bottom: 0.5px solid var(--arena); }
+  .faq-q { font-family: var(--font-display); font-size: 17px; font-weight: 400; color: var(--carbon); margin-bottom: 10px; line-height: 1.3; }
+  .faq-a { font-size: 12px; color: var(--topo); line-height: 1.8; font-weight: 300; }
+  .metodo-reminder { padding: 80px; background: var(--carbon); color: var(--crema); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; overflow: hidden; }
+  .metodo-reminder::before { content: 'EMME'; font-family: var(--font-display); font-size: 200px; font-weight: 300; color: rgba(255,255,255,0.025); position: absolute; bottom: -20px; right: -20px; letter-spacing: -0.02em; pointer-events: none; }
+  .metodo-reminder .label-tag { color: var(--salvia); }
+  .metodo-reminder .label-tag::before { background: var(--salvia); }
+  .reminder-title { font-family: var(--font-display); font-size: clamp(30px, 3.5vw, 46px); font-weight: 300; color: var(--crema); line-height: 1.15; margin-bottom: 20px; }
+  .reminder-title em { font-style: italic; color: var(--gold); }
+  .reminder-sub { font-size: 13px; color: var(--arena); line-height: 1.9; font-weight: 300; margin-bottom: 32px; }
+  .reminder-steps { display: flex; flex-direction: column; }
+  .r-step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 0.5px solid rgba(168,149,133,0.15); }
+  .r-step:first-child { border-top: 0.5px solid rgba(168,149,133,0.15); }
+  .r-step-num { font-family: var(--font-display); font-size: 12px; font-weight: 300; color: var(--gold); min-width: 24px; padding-top: 2px; }
+  .r-step h4 { font-family: var(--font-display); font-size: 16px; font-weight: 400; color: var(--crema); }
+  .r-step p { font-size: 11px; color: var(--arena); line-height: 1.6; font-weight: 300; margin-top: 3px; }
+  @media (max-width: 900px) {
+    .page-hero { padding: 120px 24px 56px; grid-template-columns: 1fr; gap: 40px; }
+    .page-content { padding: 56px 24px 0; }
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; margin-bottom: 56px; }
+    .treatments-grid { grid-template-columns: 1fr; }
+    .filosofia-bienstar { padding: 56px 24px; }
+    .fil-grid { grid-template-columns: 1fr; gap: 40px; }
+    .faq-section { padding: 56px 24px; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .metodo-reminder { padding: 64px 24px; grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <a href="../emme-clinic.html" class="nav-logo">EMM<span>E</span></a>
+  <ul class="nav-links">
+    <li><a href="../nosotras.html">Nosotras</a></li>
+    <li><a href="#" class="active">Tratamientos</a></li>
+    <li><a href="../emme-clinic.html#resultados">Resultados</a></li>
+    <li><a href="../emme-clinic.html#biblioteca">Biblioteca</a></li>
+    <li><a href="../emme-clinic.html#reserva">Contacto</a></li>
+  </ul>
+  <a href="../emme-clinic.html#reserva" class="nav-cta">Pide cita</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile" id="navMobile">
+  <a href="../nosotras.html">Nosotras</a>
+  <a href="../emme-clinic.html#tratamientos" class="nav-mobile-close">Tratamientos</a>
+  <a href="../emme-clinic.html#resultados" class="nav-mobile-close">Resultados</a>
+  <a href="../emme-clinic.html#biblioteca" class="nav-mobile-close">Biblioteca</a>
+  <a href="../emme-clinic.html#reserva" class="nav-mobile-close">Contacto</a>
+  <a href="../emme-clinic.html#reserva" class="nav-mobile-close">Pide cita →</a>
+</nav>
+
+<section class="page-hero">
+  <div>
+    <div class="breadcrumb">
+      <a href="../emme-clinic.html">Inicio</a><span>/</span>
+      <a href="#">Tratamientos</a><span>/</span>
+      Bienestar
+    </div>
+    <p class="page-hero-eyebrow">Área bienestar & longevidad</p>
+    <h1 class="page-hero-title">Bienestar<br>& <em>longevidad</em></h1>
+    <p class="page-hero-sub">La estética verdadera empieza por dentro. El área de bienestar de Emme Clinic combina medicina integrativa, nutrición médica y terapias de longevidad para que te veas y te sientas en tu mejor versión, desde dentro hacia afuera.</p>
+  </div>
+  <div class="page-hero-right">
+    <div class="hero-stat-row">
+      <div class="hero-stat-item"><div class="num">6</div><div class="lbl">Tratamientos de bienestar</div></div>
+      <div class="hero-stat-item"><div class="num">360°</div><div class="lbl">Enfoque integral</div></div>
+    </div>
+    <div class="hero-highlight">
+      <p>"No solo cómo te ves, sino cómo te sientes. La longevidad es la nueva estética."</p>
+      <span>— Dra. Diana López</span>
+    </div>
+    <a href="../emme-clinic.html#reserva" class="btn-primary">Solicitar valoración gratuita</a>
+  </div>
+</section>
+
+<div class="page-content">
+  <div class="intro-grid">
+    <div class="intro-text">
+      <p>El área de bienestar y longevidad de Emme Clinic está liderada por la <strong>Dra. Diana López</strong>, especialista en medicina anti-aging y longevidad. Su visión integrativa parte de una premisa clara: el bienestar externo es consecuencia del bienestar interno.</p>
+      <p>Los tratamientos de esta área van más allá de la estética: trabajan la salud celular, el envejecimiento funcional, la nutrición médica y la recuperación capilar. Son tratamientos que <strong>cuidan desde dentro</strong>, con resultados visibles en piel, energía, cabello y bienestar general.</p>
+      <a href="../emme-clinic.html#reserva" class="btn-ghost" style="margin-top:8px">Primera consulta gratuita</a>
+    </div>
+    <ul class="intro-list">
+      <li>Enfoque integrativo: estética + salud interna</li>
+      <li>Protocolos basados en biomarcadores y análisis clínicos</li>
+      <li>Terapias nutricionales médicamente supervisadas</li>
+      <li>Tratamientos capilares para alopecia y calidad capilar</li>
+      <li>Medicamentos y suplementos de calidad farmacéutica</li>
+      <li>Plan personalizado según analítica y objetivos de salud</li>
+    </ul>
+  </div>
+
+  <div class="treatments-header">
+    <div class="label-tag">Tratamientos disponibles</div>
+    <h2 class="section-title">Área <em>Bienestar & Longevidad</em></h2>
+    <p class="section-sub">La medicina anti-aging no trata síntomas. Trabaja sobre los mecanismos del envejecimiento para ralentizarlo desde dentro.</p>
+  </div>
+
+  <div class="treatments-grid">
+
+    <div class="treatment-card">
+      <div class="treatment-num">01</div>
+      <h3 class="treatment-name">Terapia IV vitamínica</h3>
+      <p class="treatment-need">Para nutrir, energizar y recuperar desde dentro</p>
+      <p class="treatment-desc">La administración intravenosa de vitaminas, minerales y antioxidantes garantiza una biodisponibilidad del 100%, imposible con la vía oral. Diseñamos cócteles personalizados según tus objetivos: energía, sistema inmune, luminosidad de piel, rendimiento deportivo o recuperación.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Activos</span><span class="detail-value">Vitamina C, glutatión, complejo B, magnesio, zinc, NAD+</span></div>
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Fatiga, estrés oxidativo, sistema inmune bajo, piel apagada</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">30 – 60 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">Ninguna — resultado energizante inmediato</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">02</div>
+      <h3 class="treatment-name">PRP capilar</h3>
+      <p class="treatment-need">Para frenar la caída del cabello y estimular el crecimiento</p>
+      <p class="treatment-desc">El plasma rico en plaquetas aplicado en el cuero cabelludo libera factores de crecimiento que reactivan los folículos pilosos en fase de reposo y estimulan la angiogénesis (formación de nuevos vasos). Efectivo para alopecia androgenética, alopecia difusa y mejora general de la calidad capilar.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Alopecia androgenética, caída difusa, deterioro capilar</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">60 minutos (extracción + procesado + aplicación)</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">3–4 sesiones iniciales, mantenimiento semestral</span></div>
+        <div class="detail-row"><span class="detail-label">Resultados</span><span class="detail-value">Visibles a los 3–4 meses del inicio del ciclo</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">03</div>
+      <h3 class="treatment-name">Mesoterapia capilar</h3>
+      <p class="treatment-need">Para nutrir el cuero cabelludo y fortalecer el folículo</p>
+      <p class="treatment-desc">La mesoterapia capilar introduce directamente en el cuero cabelludo una mezcla de vitaminas, minoxidil, biotina y aminoácidos que nutren el folículo desde la raíz. Complemento ideal al PRP capilar o tratamiento independiente para casos de caída moderada o mejora de la densidad capilar.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Caída moderada, cuero cabelludo seco, densidad baja</span></div>
+        <div class="detail-row"><span class="detail-label">Duración sesión</span><span class="detail-value">30 – 45 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Sesiones</span><span class="detail-value">6–10 sesiones (semanal o quincenal)</span></div>
+        <div class="detail-row"><span class="detail-label">Recuperación</span><span class="detail-value">Mínima — posible sensibilidad 24h</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">04</div>
+      <h3 class="treatment-name">Medicina anti-aging</h3>
+      <p class="treatment-need">Para ralentizar el envejecimiento celular con base científica</p>
+      <p class="treatment-desc">La medicina anti-aging trabaja sobre los mecanismos del envejecimiento: inflamación crónica de bajo grado, estrés oxidativo, disfunción mitocondrial y acortamiento de telómeros. Combinamos análisis de biomarcadores, terapia IV personalizada, suplementación médica y recomendaciones de estilo de vida basadas en evidencia.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Incluye</span><span class="detail-value">Analítica completa, evaluación de biomarcadores, plan personalizado</span></div>
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Envejecimiento prematuro, fatiga crónica, optimización de salud</span></div>
+        <div class="detail-row"><span class="detail-label">Primera consulta</span><span class="detail-value">90 minutos — evaluación exhaustiva</span></div>
+        <div class="detail-row"><span class="detail-label">Protocolo</span><span class="detail-value">Diseño individualizado según resultados analíticos</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">05</div>
+      <h3 class="treatment-name">Análisis de composición corporal</h3>
+      <p class="treatment-need">Para conocer tu cuerpo más allá del peso</p>
+      <p class="treatment-desc">El análisis de composición corporal por bioimpedancia avanzada mide masa muscular, masa grasa, agua corporal, masa ósea estimada y tasa metabólica basal. Es la base del diseño de cualquier protocolo de bienestar corporal o pérdida de grasa, y una herramienta de seguimiento objetiva.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Mide</span><span class="detail-value">Masa muscular, grasa, agua, metabolismo basal</span></div>
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Inicio de cualquier plan de bienestar o pérdida de grasa</span></div>
+        <div class="detail-row"><span class="detail-label">Duración</span><span class="detail-value">30 minutos (análisis + interpretación)</span></div>
+        <div class="detail-row"><span class="detail-label">Seguimiento</span><span class="detail-value">Comparativa mensual o trimestral</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+    <div class="treatment-card">
+      <div class="treatment-num">06</div>
+      <h3 class="treatment-name">Nutrición médica</h3>
+      <p class="treatment-need">Para cuidar tu salud y estética desde la alimentación</p>
+      <p class="treatment-desc">La nutrición médica en Emme Clinic no es una dieta genérica. Es un plan alimentario diseñado por la Dra. Diana López que integra los objetivos estéticos con la salud metabólica, inflamatoria y hormonal de cada paciente. La alimentación como herramienta terapéutica, no como restricción.</p>
+      <div class="treatment-details">
+        <div class="detail-row"><span class="detail-label">Incluye</span><span class="detail-value">Analítica básica, plan nutricional personalizado, seguimiento</span></div>
+        <div class="detail-row"><span class="detail-label">Indicado para</span><span class="detail-value">Pérdida de grasa, salud hormonal, longevidad, complemento estético</span></div>
+        <div class="detail-row"><span class="detail-label">Primera consulta</span><span class="detail-value">60 minutos</span></div>
+        <div class="detail-row"><span class="detail-label">Seguimiento</span><span class="detail-value">Mensual o según plan acordado</span></div>
+      </div>
+      <a href="../emme-clinic.html#reserva" class="treatment-cta">Solicitar valoración →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FILOSOFÍA BIENESTAR -->
+<section class="filosofia-bienstar">
+  <div class="label-tag">Por qué bienestar & longevidad</div>
+  <h2 class="section-title">La estética que <em>dura</em></h2>
+  <div class="fil-grid">
+    <div class="fil-text">
+      <p>La medicina estética trabaja sobre lo visible. La medicina de longevidad trabaja sobre lo que genera lo visible. En Emme Clinic creemos que ambas deben ir de la mano: tratar la superficie con criterio, y al mismo tiempo trabajar la salud interna que sostiene esa superficie.</p>
+      <p>La Dra. Diana López lidera este área con un enfoque claro: <strong>vivir más y vivir mejor</strong>. No se trata de frenar el tiempo, sino de optimizar cómo envejeces.</p>
+      <a href="../emme-clinic.html#reserva" class="btn-ghost" style="margin-top:16px">Primera consulta gratuita</a>
+    </div>
+    <div class="fil-pillars">
+      <div class="fil-pillar">
+        <div class="fil-pillar-title">Envejecimiento funcional</div>
+        <p class="fil-pillar-desc">Trabajamos para que tengas energía, claridad mental y vitalidad, no solo para verte bien.</p>
+      </div>
+      <div class="fil-pillar">
+        <div class="fil-pillar-title">Base analítica</div>
+        <p class="fil-pillar-desc">Cualquier protocolo parte de tu analítica. Sin datos, no hay diagnóstico. Sin diagnóstico, no hay plan.</p>
+      </div>
+      <div class="fil-pillar">
+        <div class="fil-pillar-title">Medicina integrativa</div>
+        <p class="fil-pillar-desc">Nutrición, terapias IV, medicina anti-aging y estética: disciplinas que se complementan.</p>
+      </div>
+      <div class="fil-pillar">
+        <div class="fil-pillar-title">Sin modas, con evidencia</div>
+        <p class="fil-pillar-desc">Solo protocolos con respaldo científico. La longevidad es ciencia, no tendencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="label-tag">Preguntas frecuentes</div>
+  <h2 class="section-title">Lo que más nos <em>preguntan</em></h2>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <p class="faq-q">¿La terapia IV vitamínica es segura?</p>
+      <p class="faq-a">Sí, siempre que se realice con productos farmacéuticos y bajo supervisión médica. En Emme Clinic realizamos un cuestionario de salud previo para descartar contraindicaciones. La administración siempre es supervisada por la Dra. Diana López.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿Cuándo se ven resultados del PRP capilar?</p>
+      <p class="faq-a">Los resultados del PRP capilar son progresivos. Los primeros cambios (menor caída, mayor grosor del cabello) suelen notarse a partir de los 2–3 meses. Los resultados óptimos se aprecian a los 6 meses. Se recomienda un ciclo de mantenimiento anual o semestral.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿La medicina anti-aging es solo para personas mayores?</p>
+      <p class="faq-a">No. La medicina anti-aging trabaja sobre prevención y optimización, no solo sobre corrección. Cuanto antes se empiece, más efectiva es la intervención. Muchas pacientes inician a partir de los 30 años como inversión en su salud futura.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿Necesito analítica previa para los tratamientos de bienestar?</p>
+      <p class="faq-a">Para los tratamientos IV básicos (vitamina C, hidratación) no siempre es necesaria. Para protocolos de longevidad, anti-aging o nutrición médica, la analítica es imprescindible. La primera consulta incluye la evaluación de lo que necesitas.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿El PRP capilar funciona para todos los tipos de alopecia?</p>
+      <p class="faq-a">El PRP capilar es más efectivo en alopecia androgenética en estadios iniciales-medios (Norwood I-IV en hombres, Ludwig I-II en mujeres) y en alopecia difusa. Tiene menor efectividad en alopecia areata activa o alopecia cicatricial. La valoración determina si eres buena candidata.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">¿La nutrición médica es diferente a un dietista convencional?</p>
+      <p class="faq-a">La nutrición médica integra la perspectiva clínica: analítica, salud metabólica, hormonal e inflamatoria. No se limita al conteo calórico o de macros. Es especialmente útil en pacientes con disbiosis intestinal, resistencia a la insulina, inflamación sistémica o problemas hormonales.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO EMME -->
+<section class="metodo-reminder">
+  <div>
+    <p class="label-tag">Nuestro proceso</p>
+    <h2 class="reminder-title">El bienestar también empieza<br>por <em>escucharte</em></h2>
+    <p class="reminder-sub">Antes de cualquier protocolo de bienestar o longevidad, evaluamos tu analítica, tus objetivos de salud y tu estilo de vida. El plan es tuyo, construido sobre datos reales.</p>
+    <a href="../emme-clinic.html#reserva" class="btn-gold">Reservar primera consulta</a>
+  </div>
+  <div class="reminder-steps">
+    <div class="r-step"><div class="r-step-num">01</div><div><h4>Evaluación de salud</h4><p>Historia clínica, objetivos, analítica si aplica y estilo de vida.</p></div></div>
+    <div class="r-step"><div class="r-step-num">02</div><div><h4>Diagnóstico integrativo</h4><p>Identificamos carencias, desequilibrios y oportunidades de mejora.</p></div></div>
+    <div class="r-step"><div class="r-step-num">03</div><div><h4>Protocolo personalizado</h4><p>Plan de tratamientos, suplementación y nutrición coordinados.</p></div></div>
+    <div class="r-step"><div class="r-step-num">04</div><div><h4>Seguimiento continuo</h4><p>Revisiones periódicas para ajustar el protocolo según tu evolución.</p></div></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">EMM<span>E</span></span>
+      <p class="footer-desc">Medicina estética de autor en Castellón. Dos especialistas, una misma visión: resultados naturales que respetan tu esencia.</p>
+    </div>
+    <div class="footer-col"><h5>Tratamientos</h5><ul><li><a href="facial.html">Facial</a></li><li><a href="piel.html">Calidad de piel</a></li><li><a href="corporal.html">Corporales</a></li><li><a href="bienestar.html">Bienestar</a></li></ul></div>
+    <div class="footer-col"><h5>Clínica</h5><ul><li><a href="../nosotras.html">Sobre nosotras</a></li><li><a href="../emme-clinic.html#metodo">El método Emme</a></li><li><a href="../emme-clinic.html#resultados">Resultados</a></li><li><a href="../emme-clinic.html#biblioteca">Biblioteca</a></li></ul></div>
+    <div class="footer-col"><h5>Contacto</h5><ul><li><a href="#">Calle Madrid 10, Castellón</a></li><li><a href="../emme-clinic.html#reserva">Pedir cita</a></li><li><a href="https://wa.me/34600000000">WhatsApp</a></li><li><a href="https://www.instagram.com/emme_clinic/" target="_blank">Instagram</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Emme Clinic · Medicina Estética · Castellón · Todos los derechos reservados</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/emme_clinic/" class="social-link" target="_blank">IG</a>
+      <a href="https://www.instagram.com/dra.heidyrodriguezl/" class="social-link" target="_blank">H</a>
+      <a href="https://www.instagram.com/dra.dianalopezp/" class="social-link" target="_blank">D</a>
+    </div>
+  </div>
+</footer>
+
+<!-- TODO: Reemplazar con número de WhatsApp real -->
+<a href="https://wa.me/34600000000" class="wa-float" target="_blank" title="Escríbenos por WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); navMobile.classList.toggle('open'); });
+  document.querySelectorAll('.nav-mobile-close').forEach(l => l.addEventListener('click', () => { hamburger.classList.remove('open'); navMobile.classList.remove('open'); }));
+</script>
+</body>
+</html>

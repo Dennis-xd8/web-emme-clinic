@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tratamientos Reductores No Quirúrgicos — Emme Clinic Castellón</title>
+<meta name="description" content="Mesoterapia, maderoterapia, masajes reductores y drenantes. Tratamientos reductores no quirúrgicos en Emme Clinic, Castellón. Primera consulta gratuita.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crema: #F8F5F1; --marfil: #E8E0D8; --arena: #C4B9AE;
+    --topo: #8C7B6E; --salvia: #8A9E8C; --burdeos: #7A4A38;
+    --carbon: #1F1A17; --blanco: #F8F5F1; --gold: #B87058;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--blanco); color: var(--carbon); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 72px;
+    background: rgba(248,245,241,0.95); backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(196,185,174,0.3);
+  }
+  .nav-logo { font-family: var(--font-display); font-size: 22px; font-weight: 400; letter-spacing: 0.25em; color: var(--carbon); text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-back { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--topo); text-decoration: none; transition: color .25s; }
+  .nav-back:hover { color: var(--carbon); }
+  .nav-cta { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 24px; border: 0.5px solid var(--carbon); background: transparent; color: var(--carbon); font-family: var(--font-body); font-weight: 400; transition: all .25s; text-decoration: none; }
+  .nav-cta:hover { background: var(--carbon); color: var(--blanco); }
+
+  .trat-hero {
+    padding: 140px 80px 80px; background: var(--carbon); color: var(--crema);
+    position: relative; overflow: hidden;
+  }
+  .trat-hero::before {
+    content: 'REDUCE'; position: absolute; right: -10px; top: 30px;
+    font-family: var(--font-display); font-size: 180px; font-weight: 300;
+    color: rgba(255,255,255,0.04); line-height: 1; pointer-events: none;
+  }
+  .trat-hero-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+  .trat-hero-label::before { content: ''; display: block; width: 32px; height: 0.5px; background: var(--gold); }
+  .trat-hero h1 { font-family: var(--font-display); font-size: clamp(40px, 5.5vw, 72px); font-weight: 300; line-height: 1.1; margin-bottom: 24px; }
+  .trat-hero h1 em { font-style: italic; color: var(--gold); }
+  .trat-hero-sub { font-size: 14px; color: var(--arena); line-height: 1.9; max-width: 560px; }
+
+  .servicios-section { padding: 0 80px 100px; }
+
+  .servicio {
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 480px; border-bottom: 0.5px solid var(--arena);
+  }
+  .servicio:last-child { border-bottom: none; }
+  .servicio:nth-child(even) { direction: rtl; }
+  .servicio:nth-child(even) > * { direction: ltr; }
+
+  .servicio-img { background: var(--marfil); min-height: 420px; position: relative; overflow: hidden; }
+  .servicio-img-inner { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .6s ease; }
+  .servicio:hover .servicio-img-inner { transform: scale(1.04); }
+  .servicio-img-label { position: absolute; bottom: 14px; left: 16px; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--arena); }
+
+  .servicio-info { padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; background: var(--crema); }
+  .servicio-num { font-size: 11px; letter-spacing: 0.22em; color: var(--arena); margin-bottom: 14px; font-family: var(--font-display); }
+  .servicio-name { font-family: var(--font-display); font-size: clamp(26px, 3vw, 40px); font-weight: 400; color: var(--carbon); line-height: 1.2; margin-bottom: 20px; }
+  .servicio-name em { font-style: italic; color: var(--gold); }
+  .servicio-desc { font-size: 13px; color: var(--topo); line-height: 1.9; font-weight: 300; margin-bottom: 28px; max-width: 420px; }
+  .servicio-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--topo); }
+  .servicio-tag::before { content: ''; display: block; width: 20px; height: 0.5px; background: var(--arena); }
+
+  .cta-section { display: flex; justify-content: space-between; align-items: center; padding: 80px; background: var(--carbon); gap: 40px; }
+  .cta-section h2 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 48px); font-weight: 300; color: var(--crema); line-height: 1.2; }
+  .cta-section h2 em { font-style: italic; color: var(--gold); }
+  .cta-section p { font-size: 13px; color: var(--arena); line-height: 1.9; margin-top: 14px; max-width: 420px; }
+  .btn-primary { font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; padding: 16px 36px; background: var(--gold); color: var(--blanco); border: none; cursor: pointer; font-family: var(--font-body); font-weight: 400; transition: all .3s; text-decoration: none; display: inline-block; white-space: nowrap; }
+  .btn-primary:hover { background: var(--blanco); color: var(--carbon); }
+
+  footer { display: flex; justify-content: space-between; align-items: center; padding: 28px 80px; background: var(--crema); border-top: 0.5px solid var(--arena); }
+  .footer-logo { font-family: var(--font-display); font-size: 20px; font-weight: 400; letter-spacing: 0.25em; color: var(--carbon); text-decoration: none; }
+  .footer-logo span { color: var(--gold); }
+  .footer-links { display: flex; gap: 28px; list-style: none; }
+  .footer-links a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--topo); text-decoration: none; transition: color .25s; }
+  .footer-links a:hover { color: var(--carbon); }
+  .footer-copy { font-size: 10px; color: var(--arena); }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .trat-hero { padding: 110px 24px 52px; }
+    .trat-hero::before { font-size: 80px; top: 80px; }
+    .servicios-section { padding: 0 0 60px; }
+    .servicio { grid-template-columns: 1fr; direction: ltr !important; }
+    .servicio:nth-child(even) { direction: ltr; }
+    .servicio-img { min-height: 240px; }
+    .servicio-info { padding: 36px 24px; }
+    .servicio-desc { max-width: 100%; }
+    .cta-section { flex-direction: column; padding: 52px 24px; align-items: flex-start; gap: 28px; }
+    .cta-section .btn-primary { width: 100%; text-align: center; padding: 16px 24px; }
+    footer { flex-direction: column; gap: 20px; padding: 32px 20px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">EMM<span>E</span></a>
+  <a href="../index.html#tratamientos" class="nav-back">← Tratamientos</a>
+  <a href="../index.html#reserva" class="nav-cta">Pide cita</a>
+</nav>
+
+<section class="trat-hero">
+  <p class="trat-hero-label">Tratamientos · Emme Clinic</p>
+  <h1>Tratamientos reductores<br><em>no quirúrgicos</em></h1>
+  <p class="trat-hero-sub">Técnicas manuales y protocolos específicos para moldear la silueta, reducir la celulitis y mejorar la circulación. Sin cirugía, con resultados visibles y un enfoque completamente personalizado.</p>
+</section>
+
+<section class="servicios-section">
+
+  <div class="servicio">
+    <div class="servicio-img">
+      <div class="servicio-img-inner"></div>
+      <span class="servicio-img-label">Fotografía · Emme Clinic</span>
+    </div>
+    <div class="servicio-info">
+      <span class="servicio-num">01</span>
+      <h2 class="servicio-name"><em>Mesoterapia</em></h2>
+      <p class="servicio-desc">Microinyecciones con cocktails lipolíticos y drenantes personalizados para reducir la grasa localizada, mejorar la apariencia de la celulitis y activar el metabolismo del tejido adiposo. Un tratamiento preciso con resultados progresivos.</p>
+      <span class="servicio-tag">Lipolisis localizada</span>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-img">
+      <div class="servicio-img-inner"></div>
+      <span class="servicio-img-label">Fotografía · Emme Clinic</span>
+    </div>
+    <div class="servicio-info">
+      <span class="servicio-num">02</span>
+      <h2 class="servicio-name"><em>Maderoterapia</em></h2>
+      <p class="servicio-desc">Técnica de masaje terapéutico con instrumentos de madera especialmente diseñados para moldear la silueta, romper nódulos de grasa, estimular el drenaje linfático y tonificar la piel. Una técnica natural y muy efectiva para remodelar el cuerpo.</p>
+      <span class="servicio-tag">Técnica manual</span>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-img">
+      <div class="servicio-img-inner"></div>
+      <span class="servicio-img-label">Fotografía · Emme Clinic</span>
+    </div>
+    <div class="servicio-info">
+      <span class="servicio-num">03</span>
+      <h2 class="servicio-name">Masajes reductores<br><em>Colombian Sculpting</em></h2>
+      <p class="servicio-desc">Técnica de masaje de alta presión de origen colombiano reconocida mundialmente por su eficacia en la remodelación corporal y la reducción de celulitis. Actúa directamente sobre el tejido adiposo para remodelar la silueta de forma visible.</p>
+      <span class="servicio-tag">Remodelación corporal</span>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-img">
+      <div class="servicio-img-inner"></div>
+      <span class="servicio-img-label">Fotografía · Emme Clinic</span>
+    </div>
+    <div class="servicio-info">
+      <span class="servicio-num">04</span>
+      <h2 class="servicio-name">Masajes<br><em>drenantes</em></h2>
+      <p class="servicio-desc">Drenaje linfático manual especializado para reducir la retención de líquidos, mejorar la circulación venosa y linfática, desinflamar el cuerpo y aliviar la sensación de pesadez. Ideal como tratamiento aislado o complemento a otros protocolos.</p>
+      <span class="servicio-tag">Drenaje linfático</span>
+    </div>
+  </div>
+
+</section>
+
+<section class="cta-section">
+  <div>
+    <h2>¿Por dónde<br><em>empezamos?</em></h2>
+    <p>La primera consulta es gratuita. Te escuchamos, analizamos tu caso y diseñamos el protocolo más adecuado para ti.</p>
+  </div>
+  <a href="../index.html#reserva" class="btn-primary">Solicitar valoración gratuita →</a>
+</section>
+
+<footer>
+  <a href="../index.html" class="footer-logo">EMM<span>E</span></a>
+  <ul class="footer-links">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="facial.html">Facial</a></li>
+    <li><a href="corporal.html">Corporal</a></li>
+    <li><a href="../index.html#reserva">Pedir cita</a></li>
+  </ul>
+  <span class="footer-copy">© 2025 Emme Clinic · Castellón</span>
+</footer>
+
+</body>
+</html>
